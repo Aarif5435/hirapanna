@@ -6,7 +6,6 @@ import hand from "../../public/hand.webp";
 import necklaces from "../../public/product-necklaces.webp";
 import rings from "../../public/product-ring.webp";
 import earrings from "../../public/product-earrings.jpg";
-import { div } from "framer-motion/m";
 
 const productsTypes = [
   {
