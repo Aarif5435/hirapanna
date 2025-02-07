@@ -10,6 +10,7 @@ export default {
     extend: {
       fontFamily: {
         sortsMillGoudy: ['Sorts Mill Goudy', 'sans-serif'],
+        serif: ['"EB Garamond"', 'serif']
       },
       colors: {
         background: "var(--background)",
