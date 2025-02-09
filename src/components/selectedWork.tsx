@@ -42,7 +42,7 @@ export function SelectedWork() {
         </h1>
         <div className="flex">
           {selected.map((select, ind) => (
-            <div key={ind} className="w-1/2 cursor-pointer">
+            <a href="/products/11" key={ind} className="w-1/2 cursor-pointer">
               <Image
                 className="w-10/12 z-30 hover:scale-90 duration-200"
                 src={select.img}
@@ -53,7 +53,7 @@ export function SelectedWork() {
                 <span>{select.price}</span>
               </p>
               <span className="font-normal text-sm">{select.type}</span>
-            </div>
+            </a>
           ))}
         </div>
 

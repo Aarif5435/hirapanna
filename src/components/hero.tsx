@@ -22,9 +22,9 @@ export function HeroSection() {
 
         {/* Button - Moves Along with Text */}
         <div className="mt-5 lg:ml-0 ml-auto lg:inline-block flex justify-center">
-          <button className="p-2 px-8 tracking-widest bg-white font-semibold text-xs relative flex items-center before:content-[''] before:w-[12px] hover:before:w-[20px] hover:bg-[#090909f8] hover:text-white hover:before:bg-white before:h-[1px] before:bg-black before:absolute hover:before:left-1 before:left-4 before:top-1/2 before:-translate-y-1/2 before:transition-all before:duration-300">
+          <a  href="/collections" className="p-2 px-8 tracking-widest bg-white font-semibold text-xs relative flex items-center before:content-[''] before:w-[12px] hover:before:w-[20px] hover:bg-[#090909f8] hover:text-white hover:before:bg-white before:h-[1px] before:bg-black before:absolute hover:before:left-1 before:left-4 before:top-1/2 before:-translate-y-1/2 before:transition-all before:duration-300">
             Explore Now
-          </button>
+          </a>
         </div>
       </div>
     </section>

@@ -63,7 +63,7 @@ export default function Collection() {
             </motion.div>
           ))}
         </div>
-        <a href="#" className="relative">
+        <a href="/collections" className="relative">
           <h1 className="text-[12rem] hover:scale-90 cursor-pointer font-bold text-white bg-gradient-to-b from-white to-[#CB9274] bg-[length:100%_200%] bg-clip-text transition-all font-serif duration-1000 ease-in-out hover:text-transparent hover:bg-[-100%_80%]">
             E
           </h1>

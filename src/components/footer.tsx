@@ -1,12 +1,12 @@
 import Image from "next/image";
-import logo from "../../public/svgexport-1.svg"
+import logo from "../../public/hirapann_logo.svg"
 
 
 export default function Footer() {
   return (
     <footer className="py-12">
        <div className="w-fit mb-10 mx-auto">
-          <Image src={logo} alt={"logo"} />
+       <Image className="h-fit w-28 object-cover" src={logo} alt={"logo"} />
         </div>
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-3 gap-10 text-[#1F2937] text-sm">
         
