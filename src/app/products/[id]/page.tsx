@@ -40,7 +40,7 @@ export default async function productDetails({
             alt="necklace"
             className="w-1/2 p-10 object-cover"
           />
-          <div className="p-10">
+          <div className="p-10 w-1/2">
             <span className="text-[#051F34] underline tracking-wider font-medium">
               {product?.category}
             </span>
