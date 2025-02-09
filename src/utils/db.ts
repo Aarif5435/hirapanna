@@ -12,10 +12,27 @@ import n1 from "../../public/n1.webp";
 import n2 from "../../public/n2.webp";
 import n3 from "../../public/n3.webp";
 import n4 from "../../public/n4.webp";
+import { StaticImageData } from "next/image"; 
 
 
+export type Product = {
+  id: number;
+  name: string;
+  price: string;
+  type: string;
+  img: StaticImageData; // Change from StaticImageData to string
+  category: string;
+};
 
-export const jewellryData = [
+export type Category = {
+  id: number;
+  category: string;
+  img: StaticImageData; // Image import type
+  products: Product[]; // Correct property name (not "productsts")
+};
+
+
+export const jewellryData: Category[] = [
   {
     id: 1,
     category: "Necklaces",

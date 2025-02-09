@@ -11,13 +11,13 @@ export function Navbar() {
       <nav className="flex justify-between py-4 px-4 items-center  bg-opacity-50 backdrop-blur-md">
         <ul className="hidden lg:flex justify-around  text-black text-xs font-semibold w-1/4">
           <li className="flex ">
-            <a href="/">HOME</a>
+            <Link href="/">HOME</Link>
           </li>
           <li>
-            <a href="#">ABOUT US</a>
+            <Link href="#">ABOUT US</Link>
           </li>
           <li>
-            <a href="/collections">COLLECTIONS</a>
+            <Link href="/collections">COLLECTIONS</Link>
           </li>
         </ul>
 

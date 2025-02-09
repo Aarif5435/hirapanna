@@ -1,17 +1,18 @@
 "use client";
 
+import { Product } from "@/utils/db";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export function RelatedProduct({ fourProducts }: any) {
+export function RelatedProduct({ fourProducts }: {fourProducts: Product[] | undefined}) {
   // Inside your component:
   const pathname = usePathname();
   const basePath = pathname.split("/").slice(0, -1).join("/");
 
   return (
     <div className="flex">
-      {fourProducts?.map((select: any, ind: number) => (
+      {fourProducts?.map((select: Product, ind: number) => (
         <Link
           href={`${basePath}/${select.id}`}
           key={ind}

@@ -5,6 +5,7 @@ import ears from "../../public/3earsrings.webp";
 import bracelet from "../../public/4nosering.webp";
 import UnfoldSection from "./unfoldSection";
 import Discover from "./discover";
+import Link from "next/link";
 
 const selected = [
   {
@@ -42,7 +43,7 @@ export function SelectedWork() {
         </h1>
         <div className="flex">
           {selected.map((select, ind) => (
-            <a href="/products/11" key={ind} className="w-1/2 cursor-pointer">
+            <Link href="/products/11" key={ind} className="w-1/2 cursor-pointer">
               <Image
                 className="w-10/12 z-30 hover:scale-90 duration-200"
                 src={select.img}
@@ -53,7 +54,7 @@ export function SelectedWork() {
                 <span>{select.price}</span>
               </p>
               <span className="font-normal text-sm">{select.type}</span>
-            </a>
+            </Link>
           ))}
         </div>
 

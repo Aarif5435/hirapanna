@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 
 export default function CheckoutSteps() {
-  const [_, setActiveStep] = useState("cart");
+  const [activeStep, setActiveStep] = useState("cart");
   const pathname = usePathname();
 
 
@@ -23,7 +23,7 @@ export default function CheckoutSteps() {
       {steps.map((step) => (
         <Link
           href={step.id}
-          key={step.id}
+          key={step.id + activeStep}
           className={`flex-1 text-center cursor-pointer text-3xl p-4 ${
             pathname.includes(step.id) ? "text-black font-medium" : "text-gray-400"
           } ${
