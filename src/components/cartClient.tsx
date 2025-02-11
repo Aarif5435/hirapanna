@@ -17,12 +17,10 @@ export default function ShoppingCart() {
 
   return (
     <div className="flex gap-8 p-8 max-w-7xl mx-auto">
-      {/* Main cart section */}
       <div className="flex-grow">
         <h1 className="text-2xl italic mb-8">Your cart ({quantity} item)</h1>
         
         <div className="flex items-center gap-8">
-          {/* Product image */}
           <div className="w-32 h-32 relative">
             <Image 
               src={necklace} 
@@ -31,12 +29,10 @@ export default function ShoppingCart() {
             />
           </div>
           
-          {/* Product details */}
           <div className="flex-grow">
             <h2 className="text-lg">Exuberant golden Necklace</h2>
           </div>
           
-          {/* Quantity controls */}
           <div className="flex items-center border bg-white border-gray-200">
             <button 
               onClick={decreaseQuantity}
@@ -53,7 +49,6 @@ export default function ShoppingCart() {
             </button>
           </div>
           
-          {/* Delete button */}
           <button className="text-gray-500 hover:text-gray-700">
             <span className="sr-only">Remove item</span>
             <MdDelete size={22} />
@@ -61,7 +56,6 @@ export default function ShoppingCart() {
         </div>
       </div>
 
-      {/* Cart totals sidebar */}
       <div className="w-1/3">
         <div className="bg-white p-6 rounded">
           <h2 className="text-2xl italic mb-6">Cart totals</h2>
@@ -85,12 +79,12 @@ export default function ShoppingCart() {
               placeholder="Enter your code..."
               className="w-full p-3 border border-gray-200 mb-4"
             />
-            <button className="w-full bg-black text-white p-3 mb-4">
+            <button className="w-full bg-[#E6721D] text-white p-3 mb-4">
               Apply
             </button>
           </div>
           
-          <button className="w-full bg-black text-white p-3">
+          <button className="w-full bg-[#E6721D] text-white p-3">
             <Link href={'/checkout'}>
             Proceed to checkout
             </Link>

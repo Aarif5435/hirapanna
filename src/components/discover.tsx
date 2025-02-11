@@ -34,10 +34,10 @@ export default function Discover() {
           style={{ opacity: textOpacity, y: textY }}
         >
           <h2 className="text-7xl font-semibold tracking-wide mb-6">
-            Perfect Match <br /> for Every Occasion
+            <span className="text-[#E6721D]">Perfect</span> Match <br /> for Every Occasion
           </h2>
           <span className="text-3xl font-medium">
-            Coordinate with other pieces from <br /> the collection for a classic look.
+            Coordinate with other pieces from <br /> the <span className="text-[#E6721D]">collection</span> for a classic look.
           </span>
         </motion.div>
 

@@ -25,7 +25,7 @@ export default function CheckoutSteps() {
           href={step.id}
           key={step.id + activeStep}
           className={`flex-1 text-center cursor-pointer text-3xl p-4 ${
-            pathname.includes(step.id) ? "text-black font-medium" : "text-gray-400"
+            pathname.includes(step.id) ? "text-[#E6721D] font-medium" : "text-gray-400"
           } ${
             step.id === "complete" ? "pointer-events-none text-gray-300" : ""
           }`}

@@ -12,7 +12,7 @@ export default function Footer() {
         
         {/* About Section */}
         <div className="flex flex-col items-center">
-          <h3 className="font-bold tracking-wider text-[#1F2937]">ABOUT</h3>
+          <h3 className="font-bold tracking-wider text-[#E6721D]">ABOUT</h3>
           <ul className="mt-3 space-y-2 text-center">
             <li><a href="#" className="hover:underline">our story</a></li>
             <li><a href="#" className="hover:underline">journal</a></li>
@@ -23,7 +23,7 @@ export default function Footer() {
 
         {/* Logo & Store Section */}
         <div className="flex flex-col items-center">
-          <h2 className="font-bold tracking-wider text-[#1F2937]">STORE</h2>
+          <h2 className="font-bold tracking-wider text-[#E6721D]">STORE</h2>
           <ul className="mt-3 space-y-2 text-center">
             <li><a href="#" className="hover:underline">collections</a></li>
             <li><a href="#" className="hover:underline">gift cards</a></li>
@@ -35,7 +35,7 @@ export default function Footer() {
 
         {/* Care Section */}
         <div className="flex flex-col items-center">
-          <h3 className="font-bold tracking-wider text-[#1F2937]">CARE</h3>
+          <h3 className="font-bold tracking-wider text-[#E6721D]">CARE</h3>
           <ul className="mt-3 space-y-2 text-center">
             <li><a href="#" className="hover:underline">delivery</a></li>
             <li><a href="#" className="hover:underline">return & cancellations</a></li>

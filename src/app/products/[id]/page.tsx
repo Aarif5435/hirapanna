@@ -31,6 +31,10 @@ export default async function productDetails({
 
   if (!product) return notFound();
 
+  const namePart = product?.name.split(" ") || [];
+  const firstWord = namePart[0] || "";
+  const restPart = namePart.slice(1).join(" ");
+
   return (
     <>
       <section>
@@ -41,23 +45,23 @@ export default async function productDetails({
             className="w-1/2 p-10 object-cover"
           />
           <div className="p-10 w-1/2">
-            <span className="text-[#051F34] underline tracking-wider font-medium">
+            <span className="text-[#051F34] border-b-2 border-b-[#E6721D] pb-1 tracking-wider font-medium">
               {product?.category}
             </span>
             <h1 className="text-[#051F34] pt-10 text-6xl font-semibold font-serif">
-              {product?.name}
+              <span className="text-[#E6721D]">{firstWord}</span> {restPart}
             </h1>
             <p className="text-[#051F34] text-4xl font-serif pt-5">
               ${product?.price}
             </p>
             <div className="pt-10 flex gap-10">
               <AddToCart />
-              <button className="p-2 px-8 tracking-widest bg-white font-semibold text-xs relative flex items-center before:content-[''] before:w-[12px] hover:before:w-[20px] hover:bg-[#090909f8] hover:text-white hover:before:bg-white before:h-[1px] before:bg-black before:absolute hover:before:left-1 before:left-4 before:top-1/2 before:-translate-y-1/2 before:transition-all before:duration-300">
+              <button className="p-2 px-8 tracking-widest bg-white font-semibold text-xs relative flex items-center before:content-[''] before:w-[12px] hover:before:w-[20px] hover:bg-[#E6721D] hover:text-white hover:before:bg-white before:h-[1px] before:bg-black before:absolute hover:before:left-1 before:left-4 before:top-1/2 before:-translate-y-1/2 before:transition-all before:duration-300">
                 ADD TO CART
               </button>
             </div>
             <div className="pt-10">
-              <span className="text-[#051F34] text-xs font-semibold tracking-wider">
+              <span className="text-[#E6721D] border-b-2 pb-2 border-b-[#E6721D] text-xs font-semibold tracking-wider">
                 DESCRIPTION
               </span>
               <p className="text-[#5E6368] text-lg pt-5">

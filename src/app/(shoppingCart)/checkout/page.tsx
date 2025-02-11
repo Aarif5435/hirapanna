@@ -270,13 +270,13 @@ export default function CheckoutForm() {
                 placeholder="Enter your code..."
                 className="w-full p-3 border border-gray-200 mb-4"
               />
-              <button className="w-full bg-black text-white p-3">
+              <button className="w-full bg-[#E6721D] text-white p-3">
                 Apply
               </button>
             </div>
 
             <button 
-              className="w-full bg-black text-white p-3"
+              className="w-full bg-[#E6721D] text-white p-3"
               disabled={!termsAccepted}
             >
               Place order

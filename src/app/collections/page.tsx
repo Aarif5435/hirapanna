@@ -14,17 +14,17 @@ export default function Collections() {
             <div className="relative flex justify-center items-center mt-52">
               <div className="w-1/2 bg-[#E8EBE3] h-80 border flex justify-center items-center relative">
                 <motion.div
-                  initial={{ x: -200, opacity: 0 }} // Start off-screen to the left
-                  animate={{ x: 0, opacity: 1 }} // Move to center with fade-in
-                  transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
+                  initial={{ x: -200, opacity: 0 }} 
+                  animate={{ x: 0, opacity: 1 }} 
+                  transition={{ duration: 1, ease: "easeOut" }}
                   className="w-1/2"
                 >
                   <Image src={prod.img} alt="necklace" className="w-full" />
                 </motion.div>
               </div>
             </div>
-            <div className="px-20 pt-56">
-              <h1 className="font-serif text-7xl text-[#051F34] text-center">
+            <div className="px-20 pt-56 flex flex-col items-center">
+              <h1 className="font-serif text-7xl text-[#051F34] text-center border-b-2 border-b-[#E6721D] pb-4 w-fit">
                 {prod.category}
               </h1>
               <div className="grid grid-cols-3 gap-8 pt-24">
@@ -38,7 +38,7 @@ export default function Collections() {
                     <div className="px-10">
                       <p className="font-semibold pt-2 flex justify-between mx-auto w-full">
                         <span className="w-44">{select?.name}</span>
-                        <span>{select.price}</span>
+                        <span className="text-[#E6721D]">{select.price}</span>
                       </p>
                       <span className="font-normal text-sm">{select.type}</span>
                     </div>
@@ -46,7 +46,7 @@ export default function Collections() {
                 ))}
               </div>
               <div className="flex justify-center pt-20">
-                <button className="p-2 px-8 tracking-widest bg-white font-semibold text-xs relative flex items-center before:content-[''] before:w-[12px] hover:before:w-[20px] hover:bg-[#090909f8] hover:text-white hover:before:bg-white before:h-[1px] before:bg-black before:absolute hover:before:left-1 before:left-4 before:top-1/2 before:-translate-y-1/2 before:transition-all before:duration-300">
+                <button className="p-2 px-8 tracking-widest bg-white font-semibold text-xs relative flex items-center before:content-[''] before:w-[12px] hover:before:w-[20px] hover:bg-[#E6721D] hover:text-white hover:before:bg-white before:h-[1px] before:bg-black before:absolute hover:before:left-1 before:left-4 before:top-1/2 before:-translate-y-1/2 before:transition-all before:duration-300">
                   View all
                 </button>{" "}
               </div>

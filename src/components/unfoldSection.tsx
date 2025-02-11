@@ -41,10 +41,10 @@ export default function UnfoldSection() {
           style={{ opacity: textOpacity, y: textY }}
         >
           <h2 className="text-7xl font-semibold tracking-wide mb-6">
-            Antique <br /> Diamond Necklaces
+           <span className="text-[#E6721D]">Antique</span> <br /> Diamond Necklaces
           </h2>
           <span className="text-3xl font-medium">
-            Beautiful colors. Excellent quality.
+            Beautiful <span className="text-[#E6721D]">colors.</span> Excellent quality.
           </span>
         </motion.div>
       </div>

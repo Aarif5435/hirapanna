@@ -44,7 +44,7 @@ export default function Collection() {
           </motion.div>
         </div>
         <p className="font-serif text-4xl mt-52 text-[#30373E] text-center">
-          Inspired by our multi-ethnic life, <br />
+          <span className="text-[#E6721D]">Inspired</span> by our multi-ethnic life, <br />
           we create fine jewelry to share our wonderful tales…
         </p>
         <div className="flex w-full">
@@ -64,7 +64,7 @@ export default function Collection() {
           ))}
         </div>
         <a href="/collections" className="relative">
-          <h1 className="text-[12rem] hover:scale-90 cursor-pointer font-bold text-white bg-gradient-to-b from-white to-[#CB9274] bg-[length:100%_200%] bg-clip-text transition-all font-serif duration-1000 ease-in-out hover:text-transparent hover:bg-[-100%_80%]">
+          <h1 className="text-[12rem] hover:scale-90 cursor-pointer font-bold text-white bg-gradient-to-b from-white to-[#E6721D] bg-[length:100%_200%] bg-clip-text transition-all font-serif duration-1000 ease-in-out hover:text-transparent hover:bg-[-100%_80%]">
             E
           </h1>
           <p className="text-xs text-center absolute top-1/2 left-3 font-serif">

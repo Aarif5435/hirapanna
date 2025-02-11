@@ -38,12 +38,12 @@ export function SelectedWork() {
   return (
     <>
       <section className="px-28 z-30">
-        <h1 className="text-2xl text-black font-semibold tracking-wider">
-          Selected works:
+        <h1 className="text-2xl text-black font-semibold tracking-wider border-b-[#E6721D] border-b-4 w-fit pb-1">
+          Selected <span className="text-[#E6721D]">works:</span> 
         </h1>
-        <div className="flex">
+        <div className="flex pt-4">
           {selected.map((select, ind) => (
-            <Link href="/products/11" key={ind} className="w-1/2 cursor-pointer">
+            <Link href="/products/11" key={ind} className="w-1/2 cursor-pointer border">
               <Image
                 className="w-10/12 z-30 hover:scale-90 duration-200"
                 src={select.img}
@@ -51,7 +51,7 @@ export function SelectedWork() {
               />
               <p className="font-semibold pt-2 flex justify-between w-64">
                 <span className="w-44">{select?.name}</span>
-                <span>{select.price}</span>
+                <span className="text-[#E6721D]">{select.price}</span>
               </p>
               <span className="font-normal text-sm">{select.type}</span>
             </Link>
