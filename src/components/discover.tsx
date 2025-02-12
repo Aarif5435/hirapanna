@@ -8,43 +8,47 @@ export default function Discover() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "center center"], // Stops in the center
+    offset: ["start end", "center center"], // Triggers effect as you scroll
   });
 
-  // Unfold effect: Image moves in from the right
-  const imageX = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
-
-  const textOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
-  const textY = useTransform(scrollYProgress, [0, 0.3], [50, 0]);
+  // Unfold effect for the image (Right to Left on Scroll Down)
+  const clipPath = useTransform(
+    scrollYProgress,
+    [0, 0.5], 
+    ["inset(0 100% 0 100%)", "inset(0 0% 0 0%)"] // Image unfolds from right to left
+  );
 
   return (
-    <div ref={ref} className="pt-96 relative pl-10">
-      {/* Background Box */}
-      <motion.div
-        className="absolute bg-[#E9F4F8] w-7/12 h-1/2 -z-20 right-3 bottom-14"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      ></motion.div>
-
-      <div className="flex items-center text-right  w-11/12">
-        {/* Text */}
+    <div ref={ref} className="min-h-screen relative flex items-center justify-center">
+      <div className="w-11/12 mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12">
+        {/* Background decorative element */}
         <motion.div
-          className="pl-20 font-serif"
-          style={{ opacity: textOpacity, y: textY }}
+          className="absolute bg-[#d3d5d6] w-7/12 h-1/2 -z-20 right-1 bottom-1/3"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        ></motion.div>
+
+        {/* Image container with unfolding effect (Right to Left) */}
+        <motion.div 
+          className="w-full lg:w-1/2 pt-20 relative duration-1000 overflow-hidden"
+          style={{ clipPath }}
+          // transition={{ duration: 0.5 }}
         >
-          <h2 className="text-7xl font-semibold tracking-wide mb-6">
+          <div className="relative aspect-[3/4] w-full">
+            <Image className="w-8/12 object-cover" src={discover} alt="discover" />
+          </div>
+        </motion.div>
+
+        {/* Text content (Static) */}
+        <div className="w-full lg:w-1/2 space-y-6 mb-28 h-fit text-center lg:text-right">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold tracking-wide">
             <span className="text-[#E6721D]">Perfect</span> Match <br /> for Every Occasion
           </h2>
-          <span className="text-3xl font-medium">
+          <p className="text-xl md:text-2xl lg:text-3xl font-medium">
             Coordinate with other pieces from <br /> the <span className="text-[#E6721D]">collection</span> for a classic look.
-          </span>
-        </motion.div>
-
-        {/* Image with Unfold Effect */}
-        <motion.div className="w-1/2 flex justify-end" style={{ x: imageX }}>
-          <Image className="w-8/12 object-cover" src={discover} alt="discover" />
-        </motion.div>
+          </p>
+        </div>
       </div>
     </div>
   );

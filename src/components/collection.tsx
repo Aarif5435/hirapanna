@@ -37,8 +37,8 @@ export default function Collection() {
             initial={{ y: 150, opacity: 0 }}
             whileInView={{ y: 60, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="absolute top-0 left-[37%] transform -translate-x-1/2"
+            viewport={{ once: false }}
+            className="absolute top-0 left-[37%] transform -translate-x-1/3"
           >
             <Image src={hand} alt="hand" className="w-44" />
           </motion.div>
